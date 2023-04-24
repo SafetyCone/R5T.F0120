@@ -7,7 +7,7 @@ namespace R5T.F0120.Construction
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            DateTimeDemonstrations.Instance.Format_YYYYMMDD_HHMMSS();
         }
     }
 }
