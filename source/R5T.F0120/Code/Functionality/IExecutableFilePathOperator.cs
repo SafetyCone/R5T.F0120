@@ -17,7 +17,7 @@ namespace R5T.F0120
 
 
         /// <inheritdoc cref="F0000.IExecutablePathOperator.Get_ExecutableFilePath"/>
-        public ExecutableFilePath Get_ExecutableFilePath()
+        public IExecutableFilePath Get_ExecutableFilePath()
         {
             var output = StringlyTypedOperator.Get_ExecutableFilePath()
                 .ToExecutableFilePath();
@@ -26,11 +26,11 @@ namespace R5T.F0120
         }
 
         /// <inheritdoc cref="F0002.IExecutablePathOperator.GetExecutableDirectoryPath"/>
-        public ExecutableDirectoryPath Get_ExecutableDirectoryPath()
+        public IExecutableDirectoryPath Get_ExecutableDirectoryPath()
         {
             var executableFilePath = this.Get_ExecutableFilePath();
 
-            var output = StringlyTypedPathOperator.GetParentDirectoryPath_ForFile(executableFilePath)
+            var output = StringlyTypedPathOperator.GetParentDirectoryPath_ForFile(executableFilePath.Value)
                 .ToExecutableDirectoryPath();
 
             return output;
@@ -41,7 +41,7 @@ namespace R5T.F0120
             var executableDirectoryPath = this.Get_ExecutableDirectoryPath();
 
             var output = StringlyTypedPathOperator.GetFilePath(
-                executableDirectoryPath,
+                executableDirectoryPath.Value,
                 relativeFilePath.Value)
                 .ToFilePath();
 
