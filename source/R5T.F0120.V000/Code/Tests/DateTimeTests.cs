@@ -13,7 +13,7 @@ namespace R5T.F0120.V000
         [TestMethod]
         public void To_YYYYMMDD_HHMMSS()
         {
-            var expectation = Instances.Expectations.ToString_YYYYMMDD_HHMMSS;
+            var expectation = Instances.Expectations.ToString_YYYYMMDD_HHMMSS_Dashed;
 
             expectation.Assert(
                 Instances.DateTimeOperator.To_YYYYMMDD_HHMMSS_Dashed);

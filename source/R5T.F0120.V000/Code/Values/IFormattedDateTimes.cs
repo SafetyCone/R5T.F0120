@@ -10,6 +10,6 @@ namespace R5T.F0120.V000
     [ValuesMarker]
     public partial interface IFormattedDateTimes : IValuesMarker
     {
-        public FormattedDateTime Example => "20230331 151817".ToFormattedDateTime();
+        public IFormattedDateTime Example => "20230331-151817".ToFormattedDateTime();
     }
 }

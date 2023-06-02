@@ -9,7 +9,7 @@ namespace R5T.F0120.V000
     [ValuesMarker]
     public partial interface IExpectations : IValuesMarker
     {
-        public IExpectation<DateTime, IFormattedDateTime> ToString_YYYYMMDD_HHMMSS => new Expectation<DateTime, IFormattedDateTime>
+        public IExpectation<DateTime, IFormattedDateTime> ToString_YYYYMMDD_HHMMSS_Dashed => new Expectation<DateTime, IFormattedDateTime>
         {
             Input = Instances.DateTimes.Example,
             Output = Instances.FormattedDateTimes.Example,
