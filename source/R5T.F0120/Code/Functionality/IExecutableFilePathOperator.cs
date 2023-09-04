@@ -16,7 +16,7 @@ namespace R5T.F0120
         private static F0002.IPathOperator StringlyTypedPathOperator => F0002.PathOperator.Instance;
 
 
-        /// <inheritdoc cref="F0000.IExecutablePathOperator.Get_ExecutableFilePath"/>
+        /// <inheritdoc cref="L0053.IExecutablePathOperator.Get_ExecutableFilePath"/>
         public IExecutableFilePath Get_ExecutableFilePath()
         {
             var output = StringlyTypedOperator.Get_ExecutableFilePath()
@@ -25,7 +25,7 @@ namespace R5T.F0120
             return output;
         }
 
-        /// <inheritdoc cref="F0002.IExecutablePathOperator.GetExecutableDirectoryPath"/>
+        /// <inheritdoc cref="L0053.IExecutablePathOperator.Get_ExecutableDirectoryPath()"/>
         public IExecutableDirectoryPath Get_ExecutableDirectoryPath()
         {
             var executableFilePath = this.Get_ExecutableFilePath();
