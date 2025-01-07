@@ -37,12 +37,15 @@ namespace R5T.F0120
         }
 
         public IFilePath Get_ExecutableDirectoryRelativeFilePath(IRelativeFilePath relativeFilePath)
+            => this.Get_ExecutableDirectoryRelativeFilePath(relativeFilePath.Value);
+
+        public IFilePath Get_ExecutableDirectoryRelativeFilePath(string relativeFilePath)
         {
             var executableDirectoryPath = this.Get_ExecutableDirectoryPath();
 
             var output = StringlyTypedPathOperator.Get_FilePath(
                 executableDirectoryPath.Value,
-                relativeFilePath.Value)
+                relativeFilePath)
                 .ToFilePath();
 
             return output;
